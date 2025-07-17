@@ -1,0 +1,407 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "src/Main/Main.exe"
+		},
+		{
+			"path" : "src/Main/Main.pdb"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"_add_executable",
+			"add_executable",
+			"target_link_libraries",
+			"TARGET_LINK_LIBRARIES",
+			"absl_cc_library",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"C:/Users/abav/.vcpkg-clion/vcpkg (1)/scripts/buildsystems/vcpkg.cmake",
+			"src/Main/CMakeLists.txt",
+			"src/CLI/CMakeLists.txt",
+			"src/FileReader/CMakeLists.txt",
+			"src/Player/CMakeLists.txt",
+			"lib/portaudio/CMakeLists.txt",
+			"lib/abseil-cpp/CMake/AbseilHelpers.cmake",
+			"lib/abseil-cpp/absl/strings/CMakeLists.txt",
+			"lib/abseil-cpp/absl/base/CMakeLists.txt",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 600,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 5,
+				"parent" : 4
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 5,
+				"parent" : 6
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 4,
+				"line" : 5,
+				"parent" : 8
+			},
+			{
+				"file" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 5,
+				"line" : 386,
+				"parent" : 10
+			},
+			{
+				"file" : 7
+			},
+			{
+				"command" : 4,
+				"file" : 7,
+				"line" : 35,
+				"parent" : 12
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 268,
+				"parent" : 13
+			},
+			{
+				"file" : 8
+			},
+			{
+				"command" : 4,
+				"file" : 8,
+				"line" : 226,
+				"parent" : 15
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 268,
+				"parent" : 16
+			},
+			{
+				"file" : 9
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 7,
+				"parent" : 18
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 10,
+				"parent" : 18
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 13,
+				"parent" : 18
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 15,
+				"parent" : 18
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 19,
+					"path" : "C:/Users/abav/dev/simpleFilter/lib/portaudio/include"
+				},
+				{
+					"backtrace" : 20,
+					"path" : "C:/Users/abav/dev/simpleFilter/lib/libsndfile/include"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "C:/Users/abav/dev/simpleFilter/lib/abseil-cpp"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "C:/Users/abav/dev/simpleFilter/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/abav/dev/simpleFilter/cmake-build-debug/lib/libsndfile/include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					3
+				],
+				"standard" : "23"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "portaudio_static::@8db1857f5d58be260399"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "sndfile::@cc44605524a023bbee08"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_log_severity::@e6ae9fac19a1864550e0"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_throw_delegate::@e6ae9fac19a1864550e0"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_raw_logging_internal::@e6ae9fac19a1864550e0"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_spinlock_wait::@e6ae9fac19a1864550e0"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_base::@e6ae9fac19a1864550e0"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_int128::@38f5d8c1f8eb8de4e862"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_string_view::@7c77fe7451e3dc152107"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_strings::@7c77fe7451e3dc152107"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "absl_strings_internal::@7c77fe7451e3dc152107"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "CLI::@3c9a8ec55d3b0a930214"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "FileReader::@4d4353717f41c260967a"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "Player::@be42b85d13b19d60cba7"
+		}
+	],
+	"id" : "Main::@135c4078a8fd60c50003",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -MDd -Zi",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "src\\CLI\\CLI.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "src\\FileReader\\FileReader.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "lib\\libsndfile\\sndfile.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "src\\Player\\Player.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "lib\\portaudio\\portaudio_static_x64.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "winmm.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "dsound.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "ole32.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "uuid.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "setupapi.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "lib\\abseil-cpp\\absl\\strings\\absl_strings.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "lib\\abseil-cpp\\absl\\strings\\absl_strings_internal.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "lib\\abseil-cpp\\absl\\strings\\absl_string_view.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "lib\\abseil-cpp\\absl\\numeric\\absl_int128.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "lib\\abseil-cpp\\absl\\base\\absl_base.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 17,
+				"fragment" : "lib\\abseil-cpp\\absl\\base\\absl_spinlock_wait.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "lib\\abseil-cpp\\absl\\base\\absl_throw_delegate.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "lib\\abseil-cpp\\absl\\base\\absl_raw_logging_internal.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 17,
+				"fragment" : "lib\\abseil-cpp\\absl\\base\\absl_log_severity.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "-ignore:4221",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "Main",
+	"nameOnDisk" : "Main.exe",
+	"paths" : 
+	{
+		"build" : "src/Main",
+		"source" : "src/Main"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/Main/Main.cc",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}
