@@ -6,7 +6,6 @@ C:/Users/abav/dev/simpleFilter/cmake-build-debug/CMakeFiles/list_install_compone
 C:/Users/abav/dev/simpleFilter/cmake-build-debug/CMakeFiles/install.dir
 C:/Users/abav/dev/simpleFilter/cmake-build-debug/CMakeFiles/install/local.dir
 C:/Users/abav/dev/simpleFilter/cmake-build-debug/lib/portaudio/CMakeFiles/portaudio.dir
-C:/Users/abav/dev/simpleFilter/cmake-build-debug/lib/portaudio/CMakeFiles/portaudio_static.dir
 C:/Users/abav/dev/simpleFilter/cmake-build-debug/lib/portaudio/CMakeFiles/uninstall.dir
 C:/Users/abav/dev/simpleFilter/cmake-build-debug/lib/portaudio/CMakeFiles/package.dir
 C:/Users/abav/dev/simpleFilter/cmake-build-debug/lib/portaudio/CMakeFiles/package_source.dir
@@ -217,7 +216,6 @@ C:/Users/abav/dev/simpleFilter/cmake-build-debug/lib/abseil-cpp/absl/functional/
 C:/Users/abav/dev/simpleFilter/cmake-build-debug/lib/abseil-cpp/absl/functional/CMakeFiles/install/local.dir
 C:/Users/abav/dev/simpleFilter/cmake-build-debug/lib/abseil-cpp/absl/hash/CMakeFiles/absl_hash.dir
 C:/Users/abav/dev/simpleFilter/cmake-build-debug/lib/abseil-cpp/absl/hash/CMakeFiles/absl_city.dir
-C:/Users/abav/dev/simpleFilter/cmake-build-debug/lib/abseil-cpp/absl/hash/CMakeFiles/absl_low_level_hash.dir
 C:/Users/abav/dev/simpleFilter/cmake-build-debug/lib/abseil-cpp/absl/hash/CMakeFiles/package.dir
 C:/Users/abav/dev/simpleFilter/cmake-build-debug/lib/abseil-cpp/absl/hash/CMakeFiles/package_source.dir
 C:/Users/abav/dev/simpleFilter/cmake-build-debug/lib/abseil-cpp/absl/hash/CMakeFiles/edit_cache.dir

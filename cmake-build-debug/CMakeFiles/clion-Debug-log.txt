@@ -1,13 +1,7 @@
 C:\Users\abav\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/abav/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe "-DCMAKE_TOOLCHAIN_FILE=C:\Users\abav\.vcpkg-clion\vcpkg (1)\scripts\buildsystems\vcpkg.cmake" -G Ninja -S C:\Users\abav\dev\simpleFilter -B C:\Users\abav\dev\simpleFilter\cmake-build-debug
-CMake Deprecation Warning at lib/portaudio/CMakeLists.txt:7 (CMAKE_MINIMUM_REQUIRED):
-  Compatibility with CMake < 3.5 will be removed from a future version of
-  CMake.
-
-  Update the VERSION argument <min> value or use a ...<max> suffix to tell
-  CMake that the project does not need compatibility with older versions.
-
-
--- Could NOT find ASIOSDK (missing: ASIOSDK_ROOT_DIR ASIOSDK_INCLUDE_DIR) 
+-- regex.h POSIX header NOT found and NOT available from TRE
+-- Could NOT find Regex (missing: TRE_INCLUDE_DIR TRE_LIBRARY) 
+-- Could NOT find JACK (missing: JACK_INCLUDEDIR PTHREADS_AVAILABLE Regex_FOUND) 
 -- Could NOT find Ogg (missing: Ogg_DIR)
 -- Could NOT find Vorbis (missing: Vorbis_DIR)
 -- Could NOT find FLAC (missing: FLAC_DIR)
@@ -28,6 +22,10 @@ CMake Deprecation Warning at lib/portaudio/CMakeLists.txt:7 (CMAKE_MINIMUM_REQUI
  * INSTALL_PKGCONFIG_MODULE, generate and install pkg-config module
  * INSTALL_MANPAGES, install man pages for programs
 
+-- The following REQUIRED packages have been found:
+
+ * Threads
+
 -- The following features have been disabled:
 
  * BUILD_SHARED_LIBS, build shared libraries
@@ -39,7 +37,8 @@ CMake Deprecation Warning at lib/portaudio/CMakeLists.txt:7 (CMAKE_MINIMUM_REQUI
 
 -- The following OPTIONAL packages have not been found:
 
- * ASIOSDK
+ * Regex
+ * JACK
  * Speex, an audio codec tuned for speech, <www.speex.org/>
    Enables experimental Speex support
  * SQLite3, light weight SQL database engine., <www.sqlite.org/>
@@ -60,6 +59,6 @@ CMake Deprecation Warning at lib/portaudio/CMakeLists.txt:7 (CMAKE_MINIMUM_REQUI
  * mpg123 (required version >= 1.25.10), MPEG Audio Layer I/II/III decoder, <https://www.mpg123.de/>
    Enables MPEG Audio reading support
 
--- Configuring done (5.7s)
--- Generating done (0.9s)
+-- Configuring done (5.0s)
+-- Generating done (0.5s)
 -- Build files have been written to: C:/Users/abav/dev/simpleFilter/cmake-build-debug

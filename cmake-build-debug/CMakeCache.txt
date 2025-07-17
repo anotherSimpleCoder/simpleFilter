@@ -402,6 +402,12 @@ INSTALL_MANPAGES:BOOL=ON
 //Generate and install pkg-config module
 INSTALL_PKGCONFIG_MODULE:BOOL=ON
 
+//JACK header
+JACK_INCLUDEDIR:PATH=JACK_INCLUDEDIR-NOTFOUND
+
+//JACK library
+JACK_LINK_LIBRARIES:FILEPATH=JACK_LINK_LIBRARIES-NOTFOUND
+
 //Path to a library.
 LIBRT:FILEPATH=LIBRT-NOTFOUND
 
@@ -435,6 +441,9 @@ PA_BUILD_EXAMPLES:BOOL=OFF
 //Build shared/dynamic library
 PA_BUILD_SHARED:BOOL=ON
 
+//Build dynamic library
+PA_BUILD_SHARED_LIBS:BOOL=OFF
+
 //Build static library
 PA_BUILD_STATIC:BOOL=ON
 
@@ -465,6 +474,9 @@ PA_USE_DIRECTSOUNDFULLDUPLEXCREATE:BOOL=ON
 //Enable support for DirectSound
 PA_USE_DS:BOOL=ON
 
+//Use skeleton host API
+PA_USE_SKELETON:BOOL=OFF
+
 //Enable support for WASAPI
 PA_USE_WASAPI:BOOL=ON
 
@@ -474,8 +486,11 @@ PA_USE_WDMKS:BOOL=ON
 //Use WDM/KS API for device info
 PA_USE_WDMKS_DEVICE_INFO:BOOL=ON
 
-//Enable support for MME
+//Enable support for WMME
 PA_USE_WMME:BOOL=ON
+
+//Turn compiler warnings into errors
+PA_WARNINGS_ARE_ERRORS:BOOL=OFF
 
 //Arguments to supply to pkg-config
 PKG_CONFIG_ARGN:STRING=
@@ -486,8 +501,17 @@ PKG_CONFIG_EXECUTABLE:FILEPATH=PKG_CONFIG_EXECUTABLE-NOTFOUND
 //The directory containing a CMake configuration file for PkgConfig.
 PkgConfig_DIR:PATH=PkgConfig_DIR-NOTFOUND
 
+//Value Computed by CMake
+PortAudio_BINARY_DIR:STATIC=C:/Users/abav/dev/simpleFilter/cmake-build-debug/lib/portaudio
+
 //The directory containing a CMake configuration file for PortAudio.
 PortAudio_DIR:PATH=C:/Users/abav/.vcpkg-clion/vcpkg (1)/installed/x64-windows/share/portaudio
+
+//Value Computed by CMake
+PortAudio_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+PortAudio_SOURCE_DIR:STATIC=C:/Users/abav/dev/simpleFilter/lib/portaudio
 
 //Name of the computer/site where compile is being run
 SITE:STRING=SAG-JV3LLX3
@@ -509,6 +533,12 @@ SQLite3_LIBRARY:FILEPATH=SQLite3_LIBRARY-NOTFOUND
 
 //The directory containing a CMake configuration file for Speex.
 Speex_DIR:PATH=Speex_DIR-NOTFOUND
+
+//Path to a library.
+TRE_LIBRARY:FILEPATH=TRE_LIBRARY-NOTFOUND
+
+//Path to a file.
+TRE_REGEX_H:PATH=TRE_REGEX_H-NOTFOUND
 
 //Automatically copy dependencies into the output directory for
 // executables.
@@ -597,6 +627,9 @@ mpg123_LIBRARY:FILEPATH=mpg123_LIBRARY-NOTFOUND
 
 //The directory containing a CMake configuration file for portaudio.
 portaudio_DIR:PATH=C:/Users/abav/.vcpkg-clion/vcpkg (1)/installed/x64-windows/share/portaudio
+
+//The directory containing a CMake configuration file for pthreads.
+pthreads_DIR:PATH=pthreads_DIR-NOTFOUND
 
 //Value Computed by CMake
 simpleFilter_BINARY_DIR:STATIC=C:/Users/abav/dev/simpleFilter/cmake-build-debug
@@ -996,6 +1029,8 @@ PC_SQLite3_VERSION:INTERNAL=
 PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+//Have include regex.h
+REGEX_H:INTERNAL=
 //ADVANCED property for variable: SITE
 SITE-ADVANCED:INTERNAL=1
 //CHECK_TYPE_SIZE: sizeof(int64_t)

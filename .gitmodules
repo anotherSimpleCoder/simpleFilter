@@ -1,0 +1,9 @@
+[submodule "lib/portaudio"]
+	path = lib/portaudio
+	url = https://github.com/PortAudio/portaudio
+[submodule "lib/libsndfile"]
+	path = lib/libsndfile
+	url = https://github.com/libsndfile/libsndfile
+[submodule "lib/abseil-cpp"]
+	path = lib/abseil-cpp
+	url = https://github.com/abseil/abseil-cpp

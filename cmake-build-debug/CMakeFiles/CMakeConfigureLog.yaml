@@ -1715,3 +1715,42 @@ events:
         
       exitCode: 1
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/abav/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "lib/portaudio/cmake/modules/FindRegex.cmake:23 (check_include_file)"
+      - "C:/Users/abav/.vcpkg-clion/vcpkg (1)/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
+      - "lib/portaudio/cmake/modules/FindJACK.cmake:38 (find_package)"
+      - "C:/Users/abav/.vcpkg-clion/vcpkg (1)/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
+      - "lib/portaudio/CMakeLists.txt:138 (find_package)"
+    directories:
+      source: "C:/Users/abav/dev/simpleFilter/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qf10wd"
+      binary: "C:/Users/abav/dev/simpleFilter/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qf10wd"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: ";C:/Users/abav/dev/simpleFilter/lib/portaudio/cmake/modules"
+      VCPKG_INSTALLED_DIR: "C:/Users/abav/.vcpkg-clion/vcpkg (1)/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/abav/.vcpkg-clion/vcpkg (1)"
+    buildResult:
+      variable: "REGEX_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/abav/dev/simpleFilter/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qf10wd'
+        
+        Run Build Command(s): C:/Users/abav/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_55e74
+        [1/2] C:\\PROGRA~2\\MICROS~3\\2019\\BUILDT~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_55e74.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_55e74.dir\\ /FS -c C:\\Users\\abav\\dev\\simpleFilter\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-qf10wd\\CheckIncludeFile.c
+        FAILED: CMakeFiles/cmTC_55e74.dir/CheckIncludeFile.c.obj 
+        C:\\PROGRA~2\\MICROS~3\\2019\\BUILDT~1\\VC\\Tools\\MSVC\\1429~1.301\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_55e74.dir\\CheckIncludeFile.c.obj /FdCMakeFiles\\cmTC_55e74.dir\\ /FS -c C:\\Users\\abav\\dev\\simpleFilter\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-qf10wd\\CheckIncludeFile.c
+        C:\\Users\\abav\\dev\\simpleFilter\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-qf10wd\\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'regex.h': No such file or directory
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
