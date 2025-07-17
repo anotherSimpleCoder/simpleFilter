@@ -9,11 +9,8 @@ jobs:
     steps:
       - name: Checkout Project
         uses: actions/checkout@v4.2.2
-
-      - name: Checkout submodules
-        uses: textbook/git-checkout-submodule-action@master
         with:
-          remote: true
+          submodules: recursive
 
       - name: Build Project
         uses: threeal/cmake-action@v2.1.0
