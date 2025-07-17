@@ -4,5 +4,4 @@ add_library(Player
 
 target_link_libraries(Player
         portaudio
-        portaudiocpp
 )
