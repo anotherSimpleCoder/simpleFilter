@@ -2,68 +2,88 @@
 // Created by abav on 17.07.2025.
 //
 #include "Player.hh"
+
+#include <atomic>
+#include <iostream>
 #include <stdexcept>
+#include <thread>
 #include <portaudio.h>
 
+#define SAMPLE_SIZE 256
+
+
+struct AudioCtx {
+    std::vector<float>& samples;
+    std::atomic<size_t> currentIndex{0};
+
+    AudioCtx(std::vector<float>& s) : samples(s) {}
+};
+
+int consumer(
+    const void* input,
+    void* output,
+    unsigned long frameCount,
+    const PaStreamCallbackTimeInfo* timeInfo,
+    PaStreamCallbackFlags statusFlags,
+    void* userData
+) {
+    float* out = static_cast<float*>(output);
+    AudioCtx* audioCtx = static_cast<AudioCtx*>(userData);
+
+    for (unsigned long i = 0; i < frameCount; i++) {
+        size_t index = audioCtx->currentIndex.fetch_add(1);
+
+        if (index < audioCtx->samples.size()) {
+            out[i] = audioCtx->samples[index];
+        } else {
+            out[i] = 0.0f; // Silence when we've played all samples
+        }
+    }
+
+    return audioCtx->currentIndex.load() >= audioCtx->samples.size() ? paComplete : paContinue;
+}
+
 void Player::play(std::vector<float>& samples) {
-    //Initialize
+    // Initialize PortAudio
     int err = Pa_Initialize();
-    if (err != paNoError ) {
+    if (err != paNoError) {
         throw std::runtime_error(Pa_GetErrorText(err));
     }
 
+    AudioCtx audioCtx(samples);
 
-    //Play audio
+    // Open stream
     PaStream* stream;
     err = Pa_OpenDefaultStream(
         &stream,
-        0,
-        2,
-        paFloat32,
-        44100,
-        256,
-        [](
-            const void* input,
-            void* output,
-            unsigned long frameCount,
-            const PaStreamCallbackTimeInfo* timeInfo,
-            PaStreamCallbackFlags statusFlags,
-            void* userData
-        ) {
-            float* out = (float*) output;
-            auto* sound = (std::vector<float>*) userData;
-
-            for (int i = 0; i < frameCount; i++) {
-                if (i < sound->size()) {
-                    out[i * 2] = (*sound)[i];     // Left channel
-                    out[i * 2 + 1] = (*sound)[i]; // Right channel (same as left)
-                } else {
-                    out[i * 2] = 0.0f;     // Silence when no more samples
-                    out[i * 2 + 1] = 0.0f;
-                }
-            }
-            return 0;
-        },
-        &samples
+        0,          // input channels
+        1,          // output channels
+        paFloat32,  // sample format
+        44100,      // sample rate
+        256,        // frames per buffer
+        consumer,   // callback
+        &audioCtx   // user data
     );
-    if (err != paNoError ) {
+
+    if (err != paNoError) {
+        Pa_Terminate();
         throw std::runtime_error(Pa_GetErrorText(err));
     }
 
+    // Start stream
     err = Pa_StartStream(stream);
-    if (err != paNoError ) {
+    if (err != paNoError) {
+        Pa_CloseStream(stream);
+        Pa_Terminate();
         throw std::runtime_error(Pa_GetErrorText(err));
     }
 
-    Pa_Sleep(60000);
-
-    err = Pa_StopStream(stream);
-    if (err != paNoError ) {
-        throw std::runtime_error(Pa_GetErrorText(err));
+    // Wait for stream to complete
+    while (Pa_IsStreamActive(stream)) {
+        Pa_Sleep(100);
     }
 
-    err = Pa_Terminate();
-    if (err != paNoError ) {
-        throw std::runtime_error(Pa_GetErrorText(err));
-    }
+    // Cleanup
+    Pa_CloseStream(stream);
+    Pa_Terminate();
 }

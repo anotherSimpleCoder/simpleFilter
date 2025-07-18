@@ -7,3 +7,6 @@
 [submodule "lib/abseil-cpp"]
 	path = lib/abseil-cpp
 	url = https://github.com/abseil/abseil-cpp
+[submodule "lib/qtbase"]
+    path = lib/qtbase
+    url = https://github.com/qt/qtbase
