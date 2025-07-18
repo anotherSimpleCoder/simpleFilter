@@ -3,14 +3,28 @@ project(simpleFilter)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_subdirectory(lib/portaudio)
-include_directories(lib/portaudio/include)
+include(FetchContent)
 
-add_subdirectory(lib/libsndfile)
-include_directories(lib/libsndfile/include)
+FetchContent_Declare(
+        portaudio
+        GIT_REPOSITORY https://github.com/PortAudio/portaudio
+        GIT_TAG master
+)
+FetchContent_MakeAvailable(portaudio)
 
-add_subdirectory(lib/abseil-cpp)
-include_directories(lib/abseil-cpp)
+FetchContent_Declare(
+        sndfile
+        GIT_REPOSITORY https://github.com/libsndfile/libsndfile
+        GIT_TAG master
+)
+FetchContent_MakeAvailable(sndfile)
+
+FetchContent_Declare(
+        abseil-cpp
+        GIT_REPOSITORY https://github.com/abseil/abseil-cpp
+        GIT_TAG master
+)
+FetchContent_MakeAvailable(abseil-cpp)
 
 include_directories("${CMAKE_SOURCE_DIR}/include")
 
