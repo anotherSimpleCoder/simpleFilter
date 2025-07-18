@@ -5,8 +5,7 @@
 
 
 #include <complex>
-#include <corecrt_math_defines.h>
-
+#include <math.h>
 
 void Filter::filter(std::vector<float>& audio, float filterFrequency) {
     std::vector<std::complex<float>> frequencyBins;
