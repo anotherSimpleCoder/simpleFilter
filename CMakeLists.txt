@@ -2,6 +2,13 @@ cmake_minimum_required(VERSION 3.30)
 project(simpleFilter)
 
 set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+
+if(MSVC)
+    add_compile_options(/std:c++17)
+endif()
+
 
 include(FetchContent)
 
@@ -21,10 +28,11 @@ FetchContent_MakeAvailable(sndfile)
 
 FetchContent_Declare(
         abseil-cpp
-        GIT_REPOSITORY https://github.com/abseil/abseil-cpp
-        GIT_TAG master
+        URL https://github.com/abseil/abseil-cpp/releases/download/20250512.1/abseil-cpp-20250512.1.tar.gz
+        URL_HASH SHA256=9b7a064305e9fd94d124ffa6cc358592eb42b5da588fb4e07d09254aa40086db
 )
 FetchContent_MakeAvailable(abseil-cpp)
+
 
 include_directories("${CMAKE_SOURCE_DIR}/include")
 
