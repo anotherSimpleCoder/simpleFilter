@@ -7,7 +7,7 @@
 
 #ifdef _WIN32
 #include <corecrt_math_defines.h>
-#elif
+#else
 #include <math.h>
 #endif
 
