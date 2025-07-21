@@ -3,9 +3,13 @@
 //
 #include "Filter.hh"
 
-
 #include <complex>
+
+#ifdef _WIN32
+#include <corecrt_math_defines.h>
+#elif
 #include <math.h>
+#endif
 
 void Filter::filter(std::vector<float>& audio, float filterFrequency) {
     std::vector<std::complex<float>> frequencyBins;
