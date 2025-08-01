@@ -100,7 +100,7 @@ jobs:
         # Adjust these paths based on your CMake target names
         # Replace 'your_executable_name' with your actual executable name
         if [ "${{ matrix.os }}" == "windows-latest" ]; then
-          cp ${{ steps.strings.outputs.build-output-dir }}/${{ matrix.build_type }}/src/Main/Main${{ matrix.executable_suffix }} release/
+          cp ${{ steps.strings.outputs.build-output-dir }}/src/Main/${{ matrix.build_type }}/Main${{ matrix.executable_suffix }} release/
         else
           cp ${{ steps.strings.outputs.build-output-dir }}/src/Main/Main${{ matrix.executable_suffix }} release/
         fi
