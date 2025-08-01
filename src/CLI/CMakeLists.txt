@@ -5,7 +5,7 @@ add_library(CLI
 
 target_link_libraries(CLI
     FileReader
+    FileWriter
     Filter
-    Player
     absl::strings
 )
